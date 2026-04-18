@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dibya Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h2>Dibya Portfolio</h2>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+    <a href="#clock">Clocks</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <h1>Dibya Singh Thapa</h1>
+  <p>Graphic Designer | BSIT Student | Frontend Developer</p>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+  <h2>Resume</h2>
+
+  <!-- Display Resume -->
+  <iframe src="resume.pdf.pdf" class="resume-box"></iframe>
+
+  <a class="btn" href="resume.pdf.pdf" download>Download Resume</a>
+</section>
+
+<!-- CLOCKS -->
+<section id="clock">
+  <h2>Live Digital Clocks</h2>
+
+  <div class="clock-container">
+    <div class="card">
+      <h3>Nepal Time</h3>
+      <p id="nepalClock">--:--:--</p>
+    </div>
+
+    <div class="card">
+      <h3>Your Local Time</h3>
+      <p id="localClock">--:--:--</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Me</h2>
+
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p>Email: dibyathapa223@gmail.com</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
