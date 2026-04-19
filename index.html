@@ -3,68 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dibya Portfolio</title>
+  <title>Dibya Singh Thapa | Portfolio</title>
+  
+  <!-- Modern Font: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="light"> <!-- Default class, script updates it -->
 
 <header>
-  <h2>Dibya Portfolio</h2>
+  <div class="logo">DST</div>
   <nav>
     <a href="#home">Home</a>
     <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
     <a href="#clock">Clocks</a>
+    <a href="#contact">Contact</a>
   </nav>
+  <button id="themeToggle" class="theme-btn" aria-label="Toggle Dark Mode">
+    <!-- Sun Icon -->
+    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+    <!-- Moon Icon -->
+    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+  </button>
 </header>
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <h1>Dibya Singh Thapa</h1>
-  <p>Graphic Designer | BSIT Student | Frontend Developer</p>
-</section>
-
-<!-- RESUME -->
-<section id="resume">
-  <h2>Resume</h2>
-
-  <!-- Display Resume -->
-  <iframe src="resume.pdf.pdf" class="resume-box"></iframe>
-
-  <a class="btn" href="resume.pdf.pdf" download>Download Resume</a>
-</section>
-
-<!-- CLOCKS -->
-<section id="clock">
-  <h2>Live Digital Clocks</h2>
-
-  <div class="clock-container">
-    <div class="card">
-      <h3>Nepal Time</h3>
-      <p id="nepalClock">--:--:--</p>
+<main>
+  <!-- HERO -->
+  <section id="home" class="hero section-animate">
+    <div class="hero-content">
+      <p class="greeting">Hello, I'm</p>
+      <h1>Dibya Singh Thapa</h1>
+      <p class="subtitle">Graphic Designer &bull; Frontend Developer &bull; BSIT Student</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn primary-btn">Get In Touch</a>
+        <a href="#resume" class="btn secondary-btn">View Resume</a>
+      </div>
     </div>
-
-    <div class="card">
-      <h3>Your Local Time</h3>
-      <p id="localClock">--:--:--</p>
+    <div class="hero-image">
+      <img src="dbay.jpeg" alt="Dibya Singh Thapa" class="profile-pic">
+      <div class="glow-effect"></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact Me</h2>
+  <!-- RESUME -->
+  <section id="resume" class="section-animate">
+    <div class="section-header">
+      <h2>My Resume</h2>
+      <p>A brief overview of my professional experience and skills.</p>
+    </div>
+    <div class="resume-wrapper">
+      <iframe src="resume.pdf.pdf" class="resume-box" title="Dibya's Resume"></iframe>
+      <div class="download-container">
+        <a class="btn primary-btn" href="resume.pdf.pdf" download>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Download PDF
+        </a>
+      </div>
+    </div>
+  </section>
 
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+  <!-- CLOCKS -->
+  <section id="clock" class="section-animate">
+    <div class="section-header">
+      <h2>Live Timezones</h2>
+      <p>Keeping track of time around the world.</p>
+    </div>
+    <div class="clock-container">
+      <div class="glass-card clock-card">
+        <div class="card-icon">🇳🇵</div>
+        <h3>Nepal Time</h3>
+        <p id="nepalClock" class="clock-display">--:--:--</p>
+      </div>
 
-  <p>Email: dibyathapa223@gmail.com</p>
-</section>
+      <div class="glass-card clock-card">
+        <div class="card-icon">📍</div>
+        <h3>Your Local Time</h3>
+        <p id="localClock" class="clock-display">--:--:--</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section-animate">
+    <div class="section-header">
+      <h2>Let's Connect</h2>
+      <p>Have a project in mind? Let's work together.</p>
+    </div>
+    <div class="contact-content">
+      <div class="glass-card contact-info">
+        <h3>Contact Info</h3>
+        <p>Feel free to reach out to me for any inquiries or collaborations!</p>
+        <div class="contact-method">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>dibyathapa223@gmail.com</span>
+        </div>
+      </div>
+      <form class="glass-card contact-form">
+        <div class="input-group">
+          <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+        <div class="input-group">
+          <input type="email" id="email" placeholder="Your Email" required>
+        </div>
+        <div class="input-group">
+          <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn primary-btn submit-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Dibya Singh Thapa. All rights reserved.</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
